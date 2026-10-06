@@ -29,7 +29,7 @@ See [baseline instructions](baselines/README.md). Existing research baselines mu
 
 ## Evaluation
 
-PSNR at 2048 × 1080 is confirmed as the ranking metric, following the 2026 NVS task. The exact scoring package, target-view list, and aggregation still need verification against the previous CodaBench implementation.
+PSNR at 2048 × 1080 is confirmed as the ranking metric, following the 2026 NVS task. A [local per-scene evaluator](evaluation/psnr.py) is included; the exact ULiege CodaBench cross-scene aggregation and target-view list still need verification.
 
 See [evaluation instructions](evaluation/README.md) for current code, submission formats and remaining decisions. CodaBench test and challenge links will be added after the servers have been validated.
 
@@ -40,7 +40,7 @@ See [evaluation instructions](evaluation/README.md) for current code, submission
 | Task definition | New, more realistic simulator with fewer cameras; target protocol still pending |
 | Data and splits | 2027 private dataset and splits pending |
 | Baseline | Prior code linked; 2027 predictions pending |
-| Evaluation | PSNR at 2048 × 1080 confirmed; exact aggregation and adapter pending |
+| Evaluation | PSNR at 2048 × 1080 confirmed; local per-scene code included; CodaBench aggregation pending |
 | Benchmark | CodaBench server pending |
 | Sponsor | Not confirmed |
 
