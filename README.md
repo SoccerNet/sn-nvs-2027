@@ -9,7 +9,7 @@ Can AI show the game from a new perspective? Participants will synthesize target
 👥 **Task lead(s):** ULiège and Nicolo from the University of Trento  
 🤝 **Sponsor:** To be announced
 
-🏠 [Challenge website](https://www.soccer-net.org/challenges/2027) / 🗂️ [Planned private dataset](https://huggingface.co/datasets/SoccerNet/SN-NVS-2027) / 💻 [Prior baseline repository](https://github.com/SoccerNet/sn-nvs) / 📚 [Rules](docs/rules.md) / 📊 [Evaluation](evaluation/README.md)
+🏠 [Challenge website](https://www.soccer-net.org/challenges/2027) / 🗂️ [Private dataset placeholder](https://huggingface.co/datasets/SoccerNet/SN-NVS-2027) / 💻 [Prior baseline repository](https://github.com/SoccerNet/sn-nvs) / 📚 [Rules](docs/rules.md) / 📊 [Evaluation](evaluation/README.md)
 
 ## Task
 
@@ -17,7 +17,7 @@ Can AI show the game from a new perspective? Participants will synthesize target
 
 ## Data
 
-The planned [SN-NVS-2027 dataset](https://huggingface.co/datasets/SoccerNet/SN-NVS-2027) will use a new simulator and fewer cameras. The repository is to remain private during preparation; its contents and splits are pending.
+The [SN-NVS-2027 dataset repository](https://huggingface.co/datasets/SoccerNet/SN-NVS-2027) has been created privately as an empty placeholder. Its forthcoming data will use a new simulator and fewer cameras; contents and splits are pending.
 
 See [the data guide](docs/data.md) for release status and split details. Dataset availability does not mean that the challenge is open. Private evaluation labels are not included in this repository.
 
@@ -38,7 +38,7 @@ See [evaluation instructions](evaluation/README.md) for current code, submission
 | Item | Current state |
 | --- | --- |
 | Task definition | New, more realistic simulator with fewer cameras; target protocol still pending |
-| Data and splits | 2027 private dataset and splits pending |
+| Data and splits | Private Hugging Face placeholder created; 2027 contents and splits pending |
 | Baseline | Prior code linked; 2027 predictions pending |
 | Evaluation | PSNR at 2048 × 1080 confirmed; local per-scene code included; CodaBench aggregation pending |
 | Benchmark | CodaBench server pending |

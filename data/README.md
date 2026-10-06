@@ -1,6 +1,6 @@
 # Split layout
 
-The planned private [SN-NVS-2027 dataset](https://huggingface.co/datasets/SoccerNet/SN-NVS-2027) and its 2027 content are pending. These directories establish a consistent place for public manifests once the task lead freezes them; no 2027 images are in this Git repository.
+The private [SN-NVS-2027 dataset repository](https://huggingface.co/datasets/SoccerNet/SN-NVS-2027) is created but empty. These directories establish a consistent place for public manifests once the task lead freezes them; no 2027 images are in this Git repository.
 
 | Split | Status | Ground truth here? |
 | --- | --- | --- |
