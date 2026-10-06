@@ -1,4 +1,20 @@
-# Evaluation — local 2026-style PSNR check
+# Evaluation — Triangle Splatting metrics and local PSNR check
+
+The reference implementation is [Triangle Splatting `metrics.py`](https://github.com/trianglesplatting/triangle-splatting/blob/685ff270a8273afc3a2b094ae3148dd0b98e31e9/metrics.py).
+It computes per-image PSNR, SSIM, and LPIPS using PyTorch/CUDA, then averages
+over images within each scene. [run_triangle_metrics.py](run_triangle_metrics.py)
+calls that upstream script without reimplementing the metrics. In its
+environment, prepare `<model>/test/<method>/renders/*.png` and matching
+`<model>/test/<method>/gt/*.png`, then run from this repository root:
+
+```bash
+python evaluation/run_triangle_metrics.py --triangle-repo /path/to/triangle-splatting --model-path /path/to/prepared-scene
+```
+
+Pin the upstream repository to commit `685ff270a8273afc3a2b094ae3148dd0b98e31e9`
+to match the linked source. It writes `results.json` and `per_view.json` in
+each scene model directory. The wrapper checks for PSNR in `results.json`.
+Ground truth belongs outside this repository.
 
 The local [psnr.py](psnr.py) checks render filenames and dimensions, computes per-image PSNR using the 2026 baseline formula, and averages per-image values within each scene. It is a development check, **not yet the official 2027 CodaBench scorer**.
 
@@ -29,4 +45,4 @@ Then run `python3 evaluation/psnr.py --reference /path/to/reference --prediction
 
 Recover the ULiege 2026 CodaBench scoring program, confirm cross-scene aggregation and any color/mask preprocessing, and validate the local check against its output. Then add the final 2027 scene manifest, baseline renders and score, and an organizer-only CodaBench reference package. Use the same [train/valid/test/challenge layout](../data/README.md) as the other 2027 repositories, with public target-view IDs but no challenge target images in Git. Earlier-edition scores remain background only.
 
-See [baseline references](../baselines/README.md) and [draft rules](../docs/rules.md).
+See [baseline references](../baselines/README.md) and [draft rules](../RULES.md).

@@ -9,4 +9,4 @@ The private [SN-NVS-2027 dataset repository](https://huggingface.co/datasets/Soc
 | [test](test/) | TBD | TBD |
 | [challenge](challenge/) | Separate hidden final set required | **Never** |
 
-See [data guide](../docs/data.md). Ground-truth target views for the challenge set belong only in the organizer scoring package.
+See [data guide](../README.md#data). Ground-truth target views for the challenge set belong only in the organizer scoring package.
