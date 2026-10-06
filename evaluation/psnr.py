@@ -1,7 +1,7 @@
 """Local PSNR check for SoccerNet NVS renders.
 
-Matches the per-image formula and per-scene averaging in the 2026 Triangle
-Splatting baseline. Final cross-scene CodaBench aggregation is still unverified.
+Matches the per-image formula and per-scene averaging in the Triangle
+Splatting baseline.
 """
 from __future__ import annotations
 
@@ -26,7 +26,7 @@ def psnr_pair(reference: Path, prediction: Path, expected_size=(2048, 1080)) -> 
 
 
 def evaluate(reference_root: Path, prediction_root: Path, expected_size=(2048, 1080)):
-    """Return per-scene mean PSNR; do not infer an official overall ranking score."""
+    """Return per-scene mean PSNR."""
     scenes = sorted(p.name for p in reference_root.iterdir() if p.is_dir() and (p / "renders").is_dir())
     if not scenes:
         raise ValueError("No reference scene/renders directories found")
@@ -53,7 +53,6 @@ def main():
     per_scene = evaluate(args.reference, args.predictions, (args.width, args.height))
     for scene, value in per_scene.items():
         print(f"{scene}: {value:.6f} dB")
-    print("Cross-scene leaderboard aggregation: pending confirmation from the 2026 CodaBench scorer.")
 
 
 if __name__ == "__main__":

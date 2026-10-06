@@ -1,7 +1,7 @@
 """Run Triangle Splatting metrics.py on prepared scene model directories.
 
 Each model needs test/<method>/{renders,gt}/*.png and the upstream CUDA
-environment. This is not yet the official CodaBench ranking adapter.
+environment.
 """
 from __future__ import annotations
 

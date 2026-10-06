@@ -1,12 +1,9 @@
-# Split layout
+# Data
 
-The private [SN-NVS-2027 dataset repository](https://huggingface.co/datasets/SoccerNet/SN-NVS-2027) is created but empty. This page will list public manifests once the task leads freeze them; no 2027 images are in this Git repository.
+Download the scene data from [SoccerNet/SN-NVS-2027](https://huggingface.co/datasets/SoccerNet/SN-NVS-2027):
 
-| Split | Status | Ground truth here? |
-| --- | --- | --- |
-| train | TBD | TBD |
-| valid | TBD | TBD |
-| test | TBD | TBD |
-| challenge | Separate hidden final set required | **Never** |
+```bash
+hf download SoccerNet/SN-NVS-2027 --repo-type dataset --local-dir ./SN-NVS-2027
+```
 
-See [data guide](../README.md#data). Ground-truth target views for the challenge set belong only in the organizer scoring package.
+The challenge uses calibrated camera observations from a more realistic simulator with fewer input cameras than the previous edition. Evaluation target images are withheld. See the [evaluation guide](../evaluation/README.md) for render matching and PSNR.

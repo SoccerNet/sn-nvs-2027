@@ -2,28 +2,26 @@
 
 📢 **Novel View Synthesis (NVS) Challenge!** 🚀
 
-⏳ **Status:** In preparation — submissions are not open.\
 📅 **Submission deadline:** April 25, 2027, 23:59 Anywhere on Earth (AoE; UTC−12).\
-👥 **Task leads:** Renaud Vandeghen, Giulia Martinelli, and Niccolo Bisagno\
-🤝 **Sponsor:** To be announced
+👥 **Task leads:** Renaud Vandeghen, Giulia Martinelli, and Niccolo Bisagno
 
-🏠 [Challenge website](https://www.soccer-net.org/challenges/2027) · 🗂️ [Data on Hugging Face](https://huggingface.co/datasets/SoccerNet/SN-NVS-2027) · 💻 [Baseline](baselines/README.md) · 📚 [Rules](RULES.md) · 📊 [Evaluation](evaluation/README.md) · 🏆 [Evaluation server](https://www.codabench.org/) (task URL TBD)
+🏠 [Challenge website](https://www.soccer-net.org/challenges/2027) · 🗂️ [Data on Hugging Face](https://huggingface.co/datasets/SoccerNet/SN-NVS-2027) · 💻 [Baseline](baselines/README.md) · 📚 [Rules](RULES.md) · 📊 [Evaluation](evaluation/README.md)
 
 ## Task
 
-Synthesize unseen views of soccer scenes from calibrated camera observations. The 2027 data will come from a **more realistic simulator with fewer cameras** than the 2026 edition, increasing the challenge of reconstruction from sparse views. As in [SoccerNet NVS 2026](https://github.com/SoccerNet/sn-nvs), the ranking metric is PSNR on 2048 × 1080 target images.
+Synthesize target views of soccer scenes from calibrated camera observations. This edition uses a more realistic simulator and fewer input cameras than [SoccerNet NVS 2026](https://github.com/SoccerNet/sn-nvs). Rendered views are evaluated at **2048 × 1080** using PSNR.
 
 ## Data
 
-The [SN-NVS-2027 Hugging Face repository](https://huggingface.co/datasets/SoccerNet/SN-NVS-2027) exists as a **private, empty placeholder**. Scene lists, cameras, poses, target-view IDs, and train/valid/test/challenge boundaries are not yet released. The [split inventory](data/README.md) will track the release. Challenge target images must remain in the organizer reference package, outside this Git repository.
+Get the scene data from [SN-NVS-2027](https://huggingface.co/datasets/SoccerNet/SN-NVS-2027). The [data guide](data/README.md) describes the repository's role and the separation between released inputs and evaluation target images.
 
 ## Baseline
 
-The [baseline folder](baselines/README.md) links the previous [SoccerNet NVS kit](https://github.com/SoccerNet/sn-nvs) and the [Triangle Splatting implementation](https://github.com/trianglesplatting/triangle-splatting). It gives the Hugging Face download and run sequence. A 2027-compatible checkpoint and rendered prediction set are still pending.
+The [baseline guide](baselines/README.md) links the previous SoccerNet NVS kit and the [Triangle Splatting implementation](https://github.com/trianglesplatting/triangle-splatting), with its training, rendering, and metric commands. The method references are cited below.
 
 ## Evaluation
 
-The [evaluation folder](evaluation/README.md) includes a launcher for Triangle Splatting's `metrics.py` and a local PSNR parity check. The primary metric is confirmed, but the ULiege CodaBench node's exact cross-scene aggregation and the new target-view mapping still need validation. The task evaluation server is TBD.
+The [evaluation guide](evaluation/README.md) provides a launcher for Triangle Splatting's metric script and a local PSNR calculation with image and filename validation. The ranking metric is PSNR.
 
 ## Citation
 
@@ -61,19 +59,6 @@ Cite the methods used. The conference versions for Convex Splatting, Triangle Sp
 }
 ```
 
-## Updates and support
+## Community
 
-Each task launches independently when ready. Follow the [challenge website](https://www.soccer-net.org/challenges/2027) and [SoccerNet Discord](https://discord.gg/cPbqf2mAwF) for announcements. Use repository issues for reproducible code problems; do not post access tokens or restricted data.
-
-## Release readiness
-
-| Item | Current state |
-| --- | --- |
-| Task definition | New simulator and fewer cameras confirmed; target-view protocol pending |
-| Data | Private Hugging Face placeholder created; dataset and splits pending |
-| Baseline | Prior methods linked; 2027 checkpoint and renders pending |
-| Evaluation | PSNR at 2048 × 1080 confirmed; Triangle Splatting metric code identified; server adapter pending |
-| Benchmark | ULiege-backed CodaBench server TBD |
-| Sponsor | TBD |
-
-This section is for preparation and will be removed when this task is ready for release.
+Follow the [SoccerNet challenge website](https://www.soccer-net.org/challenges/2027) and [Discord](https://discord.gg/cPbqf2mAwF) for challenge announcements and discussion.
