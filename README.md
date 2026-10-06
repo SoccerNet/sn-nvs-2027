@@ -2,14 +2,14 @@
 
 📢 **Novel View Synthesis Challenge!** 🚀
 
-Can AI show the game from a new perspective? This challenge explores the generation of unseen viewpoints from football footage. Participants will develop methods to reconstruct the scene and render new views of players and the pitch, opening possibilities for immersive viewing and match analysis.
+Can AI show the game from a new perspective? Participants will synthesize target views of football scenes from a **new, more realistic simulator** with **fewer input cameras** than the 2026 edition. The ranking metric follows the 2026 NVS task: PSNR at 2048 × 1080. The exact 2027 scene package and scorer still need validation.
 
 ⏳ **Status:** In preparation — submissions are not open.  
 📅 **Submission deadline:** April 25, 2027; cutoff time and timezone to be announced.  
 👥 **Task lead(s):** ULiège and Nicolo from the University of Trento  
 🤝 **Sponsor:** To be announced
 
-🏠 [Challenge website](https://www.soccer-net.org/challenges/2027) / 🗂️ **Data:** Coming soon / 💻 [Baseline repository](https://github.com/SoccerNet/sn-nvs) / 📚 [Rules](docs/rules.md) / 📊 [Evaluation](evaluation/README.md)
+🏠 [Challenge website](https://www.soccer-net.org/challenges/2027) / 🗂️ [Planned private dataset](https://huggingface.co/datasets/SoccerNet/SN-NVS-2027) / 💻 [Prior baseline repository](https://github.com/SoccerNet/sn-nvs) / 📚 [Rules](docs/rules.md) / 📊 [Evaluation](evaluation/README.md)
 
 ## Task
 
@@ -17,7 +17,7 @@ Can AI show the game from a new perspective? This challenge explores the generat
 
 ## Data
 
-The 2027 dataset release has not been announced. The data guide will be updated when the task leads confirm the release.
+The planned [SN-NVS-2027 dataset](https://huggingface.co/datasets/SoccerNet/SN-NVS-2027) will use a new simulator and fewer cameras. The repository is to remain private during preparation; its contents and splits are pending.
 
 See [the data guide](docs/data.md) for release status and split details. Dataset availability does not mean that the challenge is open. Private evaluation labels are not included in this repository.
 
@@ -29,9 +29,22 @@ See [baseline instructions](baselines/README.md). Existing research baselines mu
 
 ## Evaluation
 
-The 2027 evaluation code and official protocol are awaiting confirmation from the task leads.
+PSNR at 2048 × 1080 is confirmed as the ranking metric, following the 2026 NVS task. The exact scoring package, target-view list, and aggregation still need verification against the previous CodaBench implementation.
 
 See [evaluation instructions](evaluation/README.md) for current code, submission formats and remaining decisions. CodaBench test and challenge links will be added after the servers have been validated.
+
+## Release readiness
+
+| Item | Current state |
+| --- | --- |
+| Task definition | New, more realistic simulator with fewer cameras; target protocol still pending |
+| Data and splits | 2027 private dataset and splits pending |
+| Baseline | Prior code linked; 2027 predictions pending |
+| Evaluation | PSNR at 2048 × 1080 confirmed; exact aggregation and adapter pending |
+| Benchmark | CodaBench server pending |
+| Sponsor | Not confirmed |
+
+Each task launches independently after its rules, data, baseline, evaluator and benchmark are verified. See the [task specification](docs/task.md) for remaining technical decisions.
 
 ## Getting started
 
@@ -46,4 +59,4 @@ Each task launches independently once ready. Follow the [challenge website](http
 
 ## Citation and licensing
 
-The 2027 citation and repository code license will be confirmed before release. Dataset access terms and external baseline licenses apply independently; linking them does not relicense their contents.
+Related methods include [3D Convex Splatting (CVPR 2025)](https://openaccess.thecvf.com/content/CVPR2025/html/Held_3D_Convex_Splatting_Radiance_Field_Rendering_with_3D_Smooth_Convexes_CVPR_2025_paper.html), [Triangle Splatting (3DV 2026)](https://doi.org/10.1109/3DV69130.2026.00123), and [MeshSplatting (CVPR 2026)](https://openaccess.thecvf.com/content/CVPR2026/html/Held_MeshSplatting_Differentiable_Rendering_with_Opaque_Meshes_CVPR_2026_paper.html). Cite the methods used with `\cite{Held_2025_CVPR,Held_2026_3DV,Held_2026_CVPR}` as appropriate; conference BibTeX is in [CITATION.bib](CITATION.bib). The 2027 challenge citation and code license will be confirmed before release.
