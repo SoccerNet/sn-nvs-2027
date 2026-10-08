@@ -9,7 +9,7 @@
 
 ## Task
 
-Synthesize target views of soccer scenes from calibrated camera observations. This edition uses a more realistic simulator and fewer input cameras than [SoccerNet NVS 2026](https://github.com/SoccerNet/sn-nvs). Rendered views are evaluated at **2048 × 1080** using PSNR.
+Given calibrated images from a limited set of cameras, render each soccer scene from the supplied target camera viewpoints. The 2027 scenes come from a more realistic simulator and provide fewer input cameras than [SoccerNet NVS 2026](https://github.com/SoccerNet/sn-nvs). The target images are withheld; submitted RGB renders are evaluated at **2048 × 1080** using PSNR.
 
 ## Data
 
@@ -17,7 +17,7 @@ Get the scene data from [SN-NVS-2027](https://huggingface.co/datasets/SoccerNet/
 
 ## Baseline
 
-The [baseline guide](baselines/README.md) links the previous SoccerNet NVS kit and the [Triangle Splatting implementation](https://github.com/trianglesplatting/triangle-splatting), with its training, rendering, and metric commands. The method references are cited below.
+The [baseline guide](baselines/README.md) gives a complete setup and scene workflow for [Triangle Splatting](https://github.com/trianglesplatting/triangle-splatting), including training, rendering, and local metrics. It also links the previous SoccerNet NVS kit for its challenge-view renderer. The method references are cited below.
 
 ## Evaluation
 
