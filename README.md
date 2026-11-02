@@ -5,7 +5,7 @@
 📅 **Submission deadline:** April 25, 2027, 23:59 Anywhere on Earth (AoE; UTC−12).\
 👥 **Task leads:** Renaud Vandeghen, Giulia Martinelli, and Niccolo Bisagno
 
-🏠 [Challenge website](https://www.soccer-net.org/challenges/2027) · 🗂️ [Data on Hugging Face](https://huggingface.co/datasets/SoccerNet/SN-NVS-2027) · 💻 [Baseline](baselines/README.md) · 📚 [Rules](RULES.md) · 📊 [Evaluation](evaluation/README.md)
+🏠 [Challenge website](https://www.soccer-net.org/challenges/2027) · 🗂️ [Data on Hugging Face](https://huggingface.co/datasets/SoccerNet/SN-NVS-2027) · 💻 [Baseline](baselines/README.md) · 📚 [Rules](RULES.md) · 📊 [Evaluation](evaluation/README.md) · 📊 [Evaluation Server](https://www.codabench.org/competitions/18448/)
 
 ## Task
 
@@ -22,6 +22,34 @@ The [baseline guide](baselines/README.md) gives a complete setup and scene workf
 ## Evaluation
 
 The [evaluation guide](evaluation/README.md) provides a launcher for Triangle Splatting's metric script and a local PSNR calculation with image and filename validation. The ranking metric is PSNR.
+
+##Codabench
+
+For the challenge submission, we use Codabench as the submission platform. You can find the challenge page here: https://www.codabench.org/competitions/18448/.
+
+For the challenge submission, participants should use the provided `render_challenge.py` script (equivalent to render.py from 3DGS). To use it, you need to specify the model path you used during training, but you need to specify the challenge scene path. An example can be found below, using the 3DGS method:
+
+```bash
+conda activate gaussian_splatting
+python render_challenge.py 3dgs -s <path_to_challenge_scene> -m <path_to_trained_model> -i images -r 1
+```
+Depending on the method you use, you may need to change the render function. You can also directly copy and modify the `render_challenge.py` script to your own repository to fit your method.
+
+
+The participants need to submit their results in a zip file with the following structure:
+
+```
+├── scene-1-challenge/
+│   ├── renders/
+│   │   ├── 000000.png
+│   │   ├── 000001.png
+│   │   └── ...
+├── scene-2-challenge/
+│   ├── renders/
+│   │   ├── 000000.png
+│   │   ├── 000001.png
+│   │   └── ...
+```
 
 ## Citation
 
