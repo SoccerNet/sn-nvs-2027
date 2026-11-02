@@ -23,7 +23,7 @@ The [baseline guide](baselines/README.md) gives a complete setup and scene workf
 
 The [evaluation guide](evaluation/README.md) provides a launcher for Triangle Splatting's metric script and a local PSNR calculation with image and filename validation. The ranking metric is PSNR.
 
-##Codabench
+## Codabench
 
 For the challenge submission, we use Codabench as the submission platform. You can find the challenge page here: https://www.codabench.org/competitions/18448/.
 
