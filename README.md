@@ -3,7 +3,7 @@
 📢 **Novel View Synthesis (NVS) Challenge!** 🚀
 
 📅 **Submission deadline:** April 25, 2027, 23:59 Anywhere on Earth (AoE; UTC−12).\
-👥 **Task leads:** Renaud Vandeghen, Giulia Martinelli, and Niccolo Bisagno
+👥 **Task leads:** Renaud Vandeghen, [Giulia Martinelli](https://giuli13.github.io/), and [Niccoló Bisagno](https://scholar.google.com/citations?user=I6vOrqkAAAAJ&hl=it&oi=ao)
 
 🏠 [Challenge website](https://www.soccer-net.org/challenges/2027) · 🗂️ [Data on Hugging Face](https://huggingface.co/datasets/SoccerNet/SN-NVS-2027) · 💻 [Baseline](baselines/README.md) · 📚 [Rules](RULES.md) · 📊 [Evaluation](evaluation/README.md) · 📊 [Evaluation Server](https://www.codabench.org/competitions/18448/)
 
